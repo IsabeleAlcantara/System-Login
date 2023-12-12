@@ -11,6 +11,11 @@ const GlobalStyle = createGlobalStyle`
  body {
     width: 100vh;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 25%;
+    margin-right: auto;
     background-color: #fff;
     font-family: Arial, Helvetica, sans-serif;
     color: #fff;

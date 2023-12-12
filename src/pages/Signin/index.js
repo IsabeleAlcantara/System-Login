@@ -30,15 +30,15 @@ import useAuth from "../../hooks/useAuth";
     };
        
     return (
-        <C.container>
-          <C.label>Sistema de Login</C.label>
-          <C.content>
-            <Input 
-              type="email"
-              placeholder="Digite seu email"
-              value={email}
-              onChange={(e) => [setEmail(e.target.value), setError("")]}
-            />
+     <C.Container>
+       <C.Label>Sistema de Login</C.Label>
+        <C.Content>
+          <Input 
+            type="email"
+            placeholder="Digite seu email"
+            value={email}
+            onChange={(e) => [setEmail(e.target.value), setError("")]}
+          />
             <Input 
              type="password"
              placeholder="Digite sua senha"
@@ -47,14 +47,14 @@ import useAuth from "../../hooks/useAuth";
             />
            <C.labelError>{ error}</C.labelError>
            <Button Text="Entrar" onClick= {handleLogin}/>
-           <C.labelSignup>
+           <C.LabelSignup>
             Não tem conta?
             <C.Strong>
             <Link to="/Signup">&nbsp; Registre-se </Link>
            </C.Strong>
-           </C.labelSignup>       
-          </C.content>
-        </C.container>
+           </C.LabelSignup>       
+          </C.Content>
+        </C.Container>
     );
      
 };
