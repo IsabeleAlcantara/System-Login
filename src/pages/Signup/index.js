@@ -12,7 +12,7 @@ import useAuth from "../../hooks/useAuth";
    const [error, setError] = useState("");
    const navigate = useNavigate();
 
-   const {signup} = useAuth();
+   const { signup } = useAuth();
    
    const handleSignup = () => {
     if (!email | !emailConf | !senha) {
@@ -23,17 +23,19 @@ import useAuth from "../../hooks/useAuth";
       return;
     }
     const res = signup(email, senha);
+    
     if (res) {
       setError(res);
       return;
     }
+
     alert("Usuário cadastrado com sucesso!");
     navigate("/");
   };
 
    return (
     <C.Container>
-      <C.Label>Sistema De Login</C.Label>
+      <C.Label>Sistema de Login</C.Label>
       <C.Content>
         <Input 
         type="email"
