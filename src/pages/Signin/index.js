@@ -7,13 +7,12 @@ import useAuth from "../../hooks/useAuth";
 
 const Signin = () => {
   const { signin } = useAuth();
-  
-  const { email, setEmail } = useState("");
-  const { senha, setSenha } = useState("");
-  const { error, setError } = useState("");
   const navigate = useNavigate();
 
-  
+  const [email, setEmail] = useState("");
+  const [senha, setSenha] = useState("");
+  const [error, setError] = useState("");
+
   const handleLogin = () => {
     if (!email | !senha) {
       setError("Preencha todos os campos");

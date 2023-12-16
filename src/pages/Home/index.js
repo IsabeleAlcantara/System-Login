@@ -10,9 +10,10 @@ import * as C from "./styles";
    
    return (
       <C.Container>
-         <C.Title>Home</C.Title>
+         <C.Title>Bem-vindo!</C.Title>
          <Button Text="sair" onClick={() => [signout(), navigate("/")]}> Sair </Button>
       </C.Container>
+
    );
  };
 
